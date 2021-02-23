@@ -13,10 +13,10 @@ int main(void)
 		}
 	};
 
-	int (*p)[ROW_SIZE][COL_SIZE] = ary; //Æ÷ÀÎÅÍ´Â ÀÚ·áÇü°ú ¶ç¾î¾²±â
-	int i, j, k; //indexing : i, j, k ¼ø¼­ (¹İº¹¹®¿¡¼­ÀÇ ÃÊ±â°ª¿¡¼­µµ ÀÌ ¼ø¼­·Î »ç¿ë)
+	int (*p)[ROW_SIZE][COL_SIZE] = ary; 
+	int i, j, k; 
 
-	printf("ary¸¦ ÀÌ¿ëÇÑ Ãâ·Â\n");
+	printf("aryë¥¼ ì´ìš©í•œ ì¶œë ¥\n");
 	for (i = 0; i < TENS_SIZE; i++) {
 		for (j = 0; j < ROW_SIZE; j++) {
 			for (k = 0; k < COL_SIZE; k++) 
@@ -26,7 +26,7 @@ int main(void)
 	}
 	puts("\n");
 
-	printf("p¸¦ ÀÌ¿ëÇÑ Ãâ·Â\n");
+	printf("pë¥¼ ì´ìš©í•œ ì¶œë ¥\n");
 	for (i = 0; i < TENS_SIZE; i++) {
 		for (j = 0; j < ROW_SIZE; j++) {
 			for (k = 0; k < COL_SIZE; k++) 
