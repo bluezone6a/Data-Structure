@@ -1,39 +1,36 @@
-#include<stdio.h>
-#define faceSize 2
-#define rowSize 2
-#define rallySize 3
+#include <stdio.h>
 
+#define TENS_SIZE 2
+#define ROW_SIZE 2
+#define COL_SIZE 3
 
-int main() {
-
-	int ary[2][2][3] = {
-		{
+int main(void)
+{
+	int ary[TENS_SIZE][ROW_SIZE][COL_SIZE] = {{
 			{1,2,3}, {4,5,6}
-		},
-		{
+		},{
 			{7,8,9}, {10,11,12}
-
 		}
 	};
 
-	int(*p)[rowSize][rallySize] = ary;
-	int x, y, z; //Ìñâ Ïó¥ Î©¥
-	
-	printf("aryÎ•º Ïù¥Ïö©Ìïú Ï∂úÎ†•\n");
-	for (z = 0; z < faceSize; z++) {
-		for (x= 0; x < rowSize; x++) {
-			for (y = 0; y < rallySize; y++) printf("%2d ", ary[z][x][y]);
+	int (*p)[ROW_SIZE][COL_SIZE] = ary; //∆˜¿Œ≈Õ¥¬ ¿⁄∑·«¸∞˙ ∂ÁæÓæ≤±‚
+	int i, j, k; //indexing : i, j, k º¯º≠ (π›∫ππÆø°º≠¿« √ ±‚∞™ø°º≠µµ ¿Ã º¯º≠∑Œ ªÁøÎ)
+
+	printf("ary∏¶ ¿ÃøÎ«— √‚∑¬\n");
+	for (i = 0; i < TENS_SIZE; i++) {
+		for (j = 0; j < ROW_SIZE; j++) {
+			for (k = 0; k < COL_SIZE; k++) 
+				printf("%2d ", ary[i][j][k]);
 			putchar('\n');
 		}
 	}
-	
 	puts("\n");
 
-	printf("pÎ•º Ïù¥Ïö©Ìïú Ï∂úÎ†•\n");
-
-	for (z = 0; z < faceSize; z++) {
-		for (x = 0; x < rowSize; x++) {
-			for (y = 0; y < rallySize; y++) printf("%2d ", p[z][x][y]);
+	printf("p∏¶ ¿ÃøÎ«— √‚∑¬\n");
+	for (i = 0; i < TENS_SIZE; i++) {
+		for (j = 0; j < ROW_SIZE; j++) {
+			for (k = 0; k < COL_SIZE; k++) 
+				printf("%2d ", p[i][j][k]);
 			putchar('\n');
 		}
 	}

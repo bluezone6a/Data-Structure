@@ -1,18 +1,15 @@
-#include<stdio.h>
-#define abcSize 3
-#define smallLetterInitial 97 
+#include <stdio.h>
 
-int main() {
+#define ABC_SIZE 3
+
+int main(void) 
+{
 
 	int i, a = 2, b = 3, c = 4;
-	int* abc[abcSize] = { &a, &b, &c };
+	int* p[ABC_SIZE] = { &a, &b, &c };
 
-	for (i = 0; i < abcSize; i++) {
-		printf(" %c :  %d", smallLetterInitial + i, *abc[i]);
-		if (i != abcSize-1) putchar(',');
-	}
-	
-	putchar('\n');
+	printf("포인터 배열의 배열요소를 이용한 a,b,c 출력\n");
+	printf("a : %d, b : %d, c : %d\n", *p[0], *p[1], *p[2]);
 
 	return 0;
 }

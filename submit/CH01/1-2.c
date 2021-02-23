@@ -1,26 +1,29 @@
-#include<stdio.h>
-#define rowSize 2
-#define rallySize 3
+#include <stdio.h>
 
-int main(){
+#define ROW_SIZE 2
+#define COL_SIZE 3
 
-	int ary[rowSize][rallySize] = { {4,2,3},{5,2,3} };
-	int(*p)[rallySize] = ary;
-	int i,j;
+int main(void)
+{
 
-	printf("aryë¥¼ ì´ìš©í•œ ì¶œë ¥\n");
-	for (i = 0; i < rowSize; i++) { 
-		for(j=0; j< rallySize; j++) printf("%d ", ary[i][j]);
+	int ary[ROW_SIZE][COL_SIZE] = { {4,2,3},{5,2,3} };
+	int(*p)[COL_SIZE] = ary;
+	int i, j; //indexing ÇÏ±âÀ§ÇØ i¿Í j¸¦ ¾´´Ù. i´ÙÀ½¿¡ jÀÌ°í 3Â÷¿ø ¹è¿­±îÁö °¡°ÔµÇ¸é k·Î Ã³¸®ÇÑ´Ù.
+
+	printf("ary¸¦ ÀÌ¿ëÇÑ Ãâ·Â\n");
+	for (i = 0; i < ROW_SIZE; i++) {
+		for (j = 0; j < COL_SIZE; j++) 
+			printf("%d ", ary[i][j]);
 		putchar('\n');
 	}
-	
-	puts("\n");
-	
-	printf("pë¥¼ ì´ìš©í•œ ì¶œë ¥\n");
-	
-	for (i = 0; i < rowSize; i++) {
-		for (j = 0; j < rallySize; j++)	printf("%d ", p[i][j]);
+	puts("\n"); //°°Àº ÆÄÆ®´Â °³ÇàÇÑ´Ù.
+
+	printf("p¸¦ ÀÌ¿ëÇÑ Ãâ·Â\n");
+	for (i = 0; i < ROW_SIZE; i++) {
+		for (j = 0; j < COL_SIZE; j++)	
+			printf("%d ", p[i][j]);
 		putchar('\n');
 	}
+
 	return 0;
 }

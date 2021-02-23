@@ -1,24 +1,27 @@
 /*
-	ë°°ì—´ì„ ì„ ì–¸í•˜ê³  ë°°ì—´ì´ë¦„ ary ë° ë°°ì—´ í¬ì¸í„° pë¥¼ ì´ìš©í•˜ì—¬ ë°°ì—´ìš”ì†Œë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ë¼.
-	ì´ë•Œ aryì™€ pë¥¼ ì‚¬ìš©í•œ ì—¬ëŸ¬ ê°€ì§€ ì£¼ì†Œí‘œí˜„ ë° ì—­ì°¸ì¡°ë¥¼ í…ŒìŠ¤íŠ¸í•˜ë¼.
+	¹è¿­À» ¼±¾ðÇÏ°í ¹è¿­ÀÌ¸§ ary ¹× ¹è¿­ Æ÷ÀÎÅÍ p¸¦ ÀÌ¿ëÇÏ¿© ¹è¿­¿ä¼Ò¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó.
+	ÀÌ¶§ ary¿Í p¸¦ »ç¿ëÇÑ ¿©·¯ °¡Áö ÁÖ¼ÒÇ¥Çö ¹× ¿ªÂüÁ¶¸¦ Å×½ºÆ®ÇÏ¶ó.
 */
 
-#include<stdio.h>
-#define arySize 3
+#include <stdio.h> //include¿Í <> ¶ç¾î¾²±â
+//include¿Í define ºÐ¸®
+//»ó¼ö : Naming -> ALL_CAPITAL, ¿¬¼ÓµÈ ´Ü¾îÀÏ °æ¿ì ¾ð´õ¹Ù(_)·Î ±¸º°ÇÑ´Ù.
+#define ARY_SIZE 3 // »ó¼öÀÇ °ªÀÌ ¹Ù²î°Ô µÇ¸é ÀÌ ºÎºÐ¸¸ ¼öÁ¤ÇÏ¸é µÇ¾î¼­ (Hard coding -> ¾ø¾Ö¾ß ÇÑ´Ù.)
 
-int main() {
+int main(void) //mainÇÔ¼ö¿¡´Â void
+{ // main ÇÔ¼öÀÇ ½ºÄÚÇÁ´Â °³Çà ÈÄ Ã³¸®
+	int ary[] = {8, 2, 8}; // ,µÚ¿¡ ¶ç¾î¾²±â
 
-	int ary[] = { 8,2,8 }; 
+	int *p = ary, i; //Æ÷ÀÎÅÍ´Â º¯¼ö¿Í ºÙÇô¾´´Ù.
+	printf("ary¸¦ ÀÌ¿ëÇÑ Ãâ·Â\n"); //¼³¸íÀÌ ³ª¿Â°æ¿ì ÁÖ¼®Ã³¸® ¾ÈÇØµµ µÊ
+	for (i = 0; i < ARY_SIZE; i++) 
+		printf("%d ", ary[i]); //°£´ÜÇÑ ·çÇÁÀÏ °æ¿ì ÇÑÁÙÃ³¸® ÇÏÁö¸¸ Ãâ·ÂÇÏ´Â ¸ÞÀÎ ·ÎÁ÷ÀÌ´Ï±ñ °³Çà ÈÄ Ã³¸®
+	//puts("\n");
+	putchar('\n'); //putsº¸´Ù ¸Þ¸ð¸® ´õ ¾Æ³¥ ¼ö ÀÖ´Ù.
 
-	int* p = ary; 
-	int i; 
-	printf("aryë¥¼ ì´ìš©í•œ ì¶œë ¥\n"); 
-	for (i = 0; i < arySize; i++) 	printf("%d ", ary[i]); 
-
-	puts("\n"); 
-
-	printf("pë¥¼ ì´ìš©í•œ ì¶œë ¥\n"); 
-	for(i=0; i<arySize; i++) printf("%d ", *(p + i));
-	
+	printf("p¸¦ ÀÌ¿ëÇÑ Ãâ·Â\n");
+	for (i = 0; i < ARY_SIZE; i++)
+		//printf("%d ", *(p + i));
+		printf("%d ", p[i]); //°¡µ¶¼º ´õ ÁÁ¾Æ¼­
 	return 0;
 }
