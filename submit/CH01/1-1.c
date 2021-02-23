@@ -5,7 +5,6 @@
 
 #include <stdio.h> /
 
-
 #define ARY_SIZE 3 
 
 int main(void) 
