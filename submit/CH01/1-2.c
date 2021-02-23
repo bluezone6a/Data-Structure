@@ -5,7 +5,6 @@
 
 int main(void)
 {
-
 	int ary[ROW_SIZE][COL_SIZE] = { {4,2,3},{5,2,3} };
 	int(*p)[COL_SIZE] = ary;
 	int i, j; 
