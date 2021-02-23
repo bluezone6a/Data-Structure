@@ -10,7 +10,6 @@
 int main(void) 
 { 
 	int ary[] = {8, 2, 8}; 
-
 	int *p = ary, i;
 	printf("ary를 이용한 출력\n"); 
 	for (i = 0; i < ARY_SIZE; i++) 
