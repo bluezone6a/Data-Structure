@@ -8,7 +8,7 @@ int main(){
 	int(*p)[rallySize] = ary;
 	int i,j;
 
-	printf("ary¸¦ ÀÌ¿ëÇÑ Ãâ·Â\n");
+	printf("aryë¥¼ ì´ìš©í•œ ì¶œë ¥\n");
 	for (i = 0; i < rowSize; i++) { 
 		for(j=0; j< rallySize; j++) printf("%d ", ary[i][j]);
 		putchar('\n');
@@ -16,7 +16,7 @@ int main(){
 	
 	puts("\n");
 	
-	printf("p¸¦ ÀÌ¿ëÇÑ Ãâ·Â\n");
+	printf("pë¥¼ ì´ìš©í•œ ì¶œë ¥\n");
 	
 	for (i = 0; i < rowSize; i++) {
 		for (j = 0; j < rallySize; j++)	printf("%d ", p[i][j]);
