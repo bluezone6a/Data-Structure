@@ -4,11 +4,10 @@
 
 int main(void) 
 {
-
 	int i, a = 2, b = 3, c = 4;
 	int* p[ABC_SIZE] = { &a, &b, &c };
 
-	printf("Æ÷ÀÎÅÍ ¹è¿­ÀÇ ¹è¿­¿ä¼Ò¸¦ ÀÌ¿ëÇÑ a,b,c Ãâ·Â\n");
+	printf("í¬ì¸í„° ë°°ì—´ì˜ ë°°ì—´ìš”ì†Œë¥¼ ì´ìš©í•œ a,b,c ì¶œë ¥\n");
 	printf("a : %d, b : %d, c : %d\n", *p[0], *p[1], *p[2]);
 
 	return 0;
