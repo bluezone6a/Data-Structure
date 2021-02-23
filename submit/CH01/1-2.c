@@ -8,17 +8,17 @@ int main(void)
 
 	int ary[ROW_SIZE][COL_SIZE] = { {4,2,3},{5,2,3} };
 	int(*p)[COL_SIZE] = ary;
-	int i, j; //indexing ÇÏ±âÀ§ÇØ i¿Í j¸¦ ¾´´Ù. i´ÙÀ½¿¡ jÀÌ°í 3Â÷¿ø ¹è¿­±îÁö °¡°ÔµÇ¸é k·Î Ã³¸®ÇÑ´Ù.
+	int i, j; //indexing í•˜ê¸°ìœ„í•´ iì™€ jë¥¼ ì“´ë‹¤. ië‹¤ìŒì— jì´ê³  3ì°¨ì› ë°°ì—´ê¹Œì§€ ê°€ê²Œë˜ë©´ kë¡œ ì²˜ë¦¬í•œë‹¤.
 
-	printf("ary¸¦ ÀÌ¿ëÇÑ Ãâ·Â\n");
+	printf("aryë¥¼ ì´ìš©í•œ ì¶œë ¥\n");
 	for (i = 0; i < ROW_SIZE; i++) {
 		for (j = 0; j < COL_SIZE; j++) 
 			printf("%d ", ary[i][j]);
 		putchar('\n');
 	}
-	puts("\n"); //°°Àº ÆÄÆ®´Â °³ÇàÇÑ´Ù.
+	puts("\n"); //ê°™ì€ íŒŒíŠ¸ëŠ” ë¶™í˜€ì“´ë‹¤.
 
-	printf("p¸¦ ÀÌ¿ëÇÑ Ãâ·Â\n");
+	printf("pë¥¼ ì´ìš©í•œ ì¶œë ¥\n");
 	for (i = 0; i < ROW_SIZE; i++) {
 		for (j = 0; j < COL_SIZE; j++)	
 			printf("%d ", p[i][j]);
