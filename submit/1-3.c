@@ -17,9 +17,9 @@ int main() {
 	};
 
 	int(*p)[rowSize][rallySize] = ary;
-	int x, y, z; //Çà ¿­ ¸é
+	int x, y, z; //í–‰ ì—´ ë©´
 	
-	printf("ary¸¦ ÀÌ¿ëÇÑ Ãâ·Â\n");
+	printf("aryë¥¼ ì´ìš©í•œ ì¶œë ¥\n");
 	for (z = 0; z < faceSize; z++) {
 		for (x= 0; x < rowSize; x++) {
 			for (y = 0; y < rallySize; y++) printf("%2d ", ary[z][x][y]);
@@ -29,7 +29,7 @@ int main() {
 	
 	puts("\n");
 
-	printf("p¸¦ ÀÌ¿ëÇÑ Ãâ·Â\n");
+	printf("pë¥¼ ì´ìš©í•œ ì¶œë ¥\n");
 
 	for (z = 0; z < faceSize; z++) {
 		for (x = 0; x < rowSize; x++) {
